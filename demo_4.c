@@ -25,7 +25,34 @@ int printf(char* format, ...);
 多维数组作为函数的参数
 必须声明数组中每一行有多少个元素
 int array_sort(int array[100][50]) / int array_sort(int array[][50])
+
+全局变量
+所有全局变量的初始值为 0
+在全局变量定义的数组，每一个元素初始值为 0
+
+局部变量
+局部变量初始值不确定
+
+静态变量
+static int number = 100
+在函数内部的局部变量，可以用static来限制变量只在函数开始的时候执行一次
 */
+
+int gArray[10];
+
+void
+testGArray(void) {
+    int array[10];
+    printf("array: ");
+    for (int i = 1; i < 10; i++) {
+        printf("%i ", array[i]);
+    }
+
+    printf("gArray: ");
+    for (int i = 1; i < 10; i++) {
+        printf("%i ", gArray[i]);
+    }
+}
 
 int
 minimum(int val[10]) {
@@ -87,6 +114,7 @@ testChangeArray(void) {
 int
 main(void) {
     // testMinimum();
-    testChangeArray();
+    // testChangeArray();
+    testGArray();
     return 0;
 }
