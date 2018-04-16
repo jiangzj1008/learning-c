@@ -1,1 +1,1 @@
-gcc -Wall demo_5.c -o c.exe && c.exe
+gcc -Wall demo_6.c -o c.exe && c.exe
